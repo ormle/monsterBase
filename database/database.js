@@ -1,12 +1,9 @@
 import mongoose from "mongoose";
     mongoose.set('strictQuery', true);
 
-const uri = "mongodb+srv://monsters.3fce8hk.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority";
-const credentials = "<path_to_certificate>";
-const clientOptions = {
-  tlsCertificateKeyFile: credentials,
-  serverApi: { version: '1', strict: true, deprecationErrors: true }
-};
+const uri = "mongodb+srv://315:s0szUcdXdn782rIO@monsters.3fce8hk.mongodb.net/?retryWrites=true&w=majority";
+const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
+
 export const connectDB = async () => {
   try {
     // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
